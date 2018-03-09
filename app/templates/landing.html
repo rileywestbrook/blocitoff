@@ -1,11 +1,13 @@
+<h1>Task List</h1>
 <div ng-repeat="task in landing.tasks">
-  {{task["Description"]}} <br />
+  {{ task.Description }} <br/>
 </div>
 <form>
-	<h3>Create a new Item</h3>
+	<h3>Create a New Task</h3>
 	<input type="text" ng-model="task.description"> <br />
 	<div class="submission">
 		<button ui-sref="landing">Cancel</button>
 		<input type="submit" ng-click="update(task)" value="Add">
 	</div>
 </form>
+<p>{{foo}}</p>
