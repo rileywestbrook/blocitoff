@@ -1,3 +1,64 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.list {
+  margin: 100px auto;
+  width: 450px;
+  height: 550px;
+  background-color: #e1e3e8;
+  position: relative;
+}
+
+.heading {
+  background-color: #a7a8aa;
+  padding: 1px 5px 1px 25px;
+}
+
+.body {
+  width: 100%;
+  font-size: 20px;
+  overflow-y: scroll;
+  height: 430px;
+}
+
+.input-field {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px;
+  border-color: #a7a8aa;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.task-input {
+  float: left;
+  width: 80%;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+  border-right: 1px solid #a7a8aa;
+  box-sizing : border-box;
+}
+
+.task-add {
+  float: left;
+  width: 20%;
+  height: 30px;
+  border: none;
+  font-size: 18px;
+  position: absolute;
+  background-color: #a7a8aa;
+  cursor: pointer;
+}
+
+.tasks {
+  padding: 15px 25px;
+}
+
+.diff-color {
+  background-color: #f4f5f7;
 }
