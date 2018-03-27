@@ -5,7 +5,9 @@
     Task.tasks = tasks;
 
     Task.addTask = function(task){
-      tasks.$add({ Description : task.description })
+      create_time = (new Date()).getTime();
+      console.log(create_time)
+      tasks.$add({ Description : task.description, Complete : false, Created_at : create_time })
     }
 
     return Task;
