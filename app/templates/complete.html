@@ -1,0 +1,11 @@
+<div class="list">
+  <a ui-sref="landing">Current Tasks</a>
+  <div class="heading">
+    <h1>Completed Lists</h1>
+  </div>
+  <div class="body">
+    <div ng-repeat="task in complete.tasks" ng-hide="(complete.current_time - task['Created_at']) < 604800000 || task['Complete'] == false" class="tasks" ng-class-odd="'diff-color'">
+      {{ task.Description }} <br/>
+    </div>
+  </div>
+</div>
