@@ -6,8 +6,13 @@
 
     Task.addTask = function(task){
       create_time = (new Date()).getTime();
-      console.log(create_time)
-      tasks.$add({ Description : task.description, Complete : false, Created_at : create_time })
+      if (task.priority == "high"){
+        tasks.$add({ Description : task.description, Priority : 2, Complete : false, Created_at : create_time })
+      } else if (task.priority == "medium") {
+        tasks.$add({ Description : task.description, Priority : 1, Complete : false, Created_at : create_time })
+      } else {
+        tasks.$add({ Description : task.description, Priority : 0, Complete : false, Created_at : create_time })
+      }
     }
 
     return Task;
