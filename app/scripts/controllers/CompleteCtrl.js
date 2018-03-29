@@ -3,6 +3,7 @@
     //this.tasks = Task.tasks;
     this.tasks = Task.tasks;
     this.current_time = (new Date()).getTime();
+    console.log(this.tasks)
   }
 
   angular
