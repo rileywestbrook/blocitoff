@@ -13,7 +13,10 @@
       } else {
         tasks.$add({ Description : task.description, Priority : 0, Complete : false, Created_at : create_time })
       }
-    }
+    };
+    Task.updateTask = function(task){
+      ref.child(task['$id']).update({ Complete: true });
+    };
 
     return Task;
   }

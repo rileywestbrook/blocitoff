@@ -6,18 +6,19 @@
   <div class="body">
     <div ng-repeat="task in landing.tasks | orderBy: '-Priority'" ng-hide="(landing.current_time - task['Created_at']) > 604800000 || task['Complete'] == true" class="tasks" ng-class-odd="'diff-color'">
       {{ task.Description }} <br/>
+      <button ng-hide="(landing.current_time - task['Created_at']) > 604800000 || task['Complete'] == true" ng-click="update(ask)">Complete!</button>
     </div>
   </div>
   <div class="input-field">
     <form>
     	<input type="text" ng-model="task.description" class="task-input">
       <select type="text" ng-model="task.priority" class="priority-input">
-        <option value="" disabled selected>- select -</option>
+        <option value="" disabled selected>- priority -</option>
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
-    	<input type="submit" ng-click="update(task)" value="Add" class="task-add">
+    	<input type="submit" ng-click="add(task)" value="Add" class="task-add">
     </form>
   </div>
 </div>
