@@ -81,3 +81,8 @@ body {
   color: black;
   padding: 5px;
 }
+
+.complete-button {
+  float: right;
+  margin-top: 5px;
+}

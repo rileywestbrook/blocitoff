@@ -5,8 +5,8 @@
   </div>
   <div class="body">
     <div ng-repeat="task in landing.tasks | orderBy: '-Priority'" ng-hide="(landing.current_time - task['Created_at']) > 604800000 || task['Complete'] == true" class="tasks" ng-class-odd="'diff-color'">
-      {{ task.Description }} <br/>
-      <button ng-hide="(landing.current_time - task['Created_at']) > 604800000 || task['Complete'] == true" ng-click="update(ask)">Complete!</button>
+      {{ task.Description }}
+      <button ng-hide="(landing.current_time - task['Created_at']) > 604800000 || task['Complete'] == true" ng-click="update(task)" class="complete-button">Complete!</button>
     </div>
   </div>
   <div class="input-field">
